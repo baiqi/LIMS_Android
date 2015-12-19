@@ -38,7 +38,6 @@ public class DeviceListFragment extends android.support.v4.app.Fragment implemen
 
     public DeviceListFragment(FragmentManager fragmentManager) {
         this.fragmentManager = fragmentManager;
-//        this.fragmentManager = DeviceListFragment.this.getActivity().getSupportFragmentManager();
     }
 
     @Override

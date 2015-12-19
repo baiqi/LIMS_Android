@@ -35,7 +35,6 @@ public class ReserveFragment extends android.support.v4.app.Fragment implements 
 
     public ReserveFragment(FragmentManager fragmentManager) {
         this.fragmentManager = fragmentManager;
-//        this.fragmentManager = ReserveFragment.this.getActivity().getSupportFragmentManager();
     }
 
     @Override

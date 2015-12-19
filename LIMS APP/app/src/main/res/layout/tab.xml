@@ -12,10 +12,10 @@
         android:layout_weight="1"
         android:layout_gravity="center"
         android:gravity="center"
-        android:drawableTop="@mipmap/tab_icon_news_hover"
+        android:drawableTop="@mipmap/tab_icon_news"
         android:textSize="@dimen/font_tab"
         android:text="@string/tab_news"
-        android:textColor="@color/color_font_tab_hover"
+        android:textColor="@color/color_font_tab"
         android:drawablePadding="@dimen/tab_drawable_padding"/>
     <TextView
         android:id="@+id/tab_lesson"
@@ -24,10 +24,10 @@
         android:layout_weight="1"
         android:layout_gravity="center"
         android:gravity="center"
-        android:drawableTop="@mipmap/tab_icon_lesson"
+        android:drawableTop="@mipmap/tab_icon_lesson_hover"
         android:textSize="@dimen/font_tab"
         android:text="@string/tab_lesson"
-        android:textColor="@color/color_font_tab"
+        android:textColor="@color/color_font_tab_hover"
         android:drawablePadding="@dimen/tab_drawable_padding"/>
     <TextView
         android:id="@+id/tab_device"

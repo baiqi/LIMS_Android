@@ -34,7 +34,6 @@ public class TotalFragment extends android.support.v4.app.Fragment implements Vi
 
     public TotalFragment(FragmentManager fragmentManager) {
         this.fragmentManager = fragmentManager;
-//        this.fragmentManager = TotalFragment.this.getActivity().getSupportFragmentManager();
     }
 
     @Override

@@ -9,22 +9,6 @@
     <dimen name="content_padding_right">10dp</dimen>
     <dimen name="tab_device_total_padding">10dp</dimen>
 
-    <!-- padding list item -->
-    <dimen name="list_item_padding_top">10dp</dimen>
-    <dimen name="list_item_padding_bottom">5dp</dimen>
-    <dimen name="list_item_padding_left">5dp</dimen>
-    <dimen name="list_item_padding_right">5dp</dimen>
-    <dimen name="list_item_info_padding_right">15dp</dimen>
-    <dimen name="list_item_info_drawable_padding">5dp</dimen>
-    <dimen name="list_item_info_padding_top">5dp</dimen>
-    <dimen name="list_item_device_category_padding_right">15dp</dimen>
-
-    <dimen name="list_item_device_reserve_btn_padding_top">10dp</dimen>
-    <dimen name="list_item_device_reserve_btn_padding_bottom">5dp</dimen>
-
-    <dimen name="list_item_device_padding">15dp</dimen>
-    <dimen name="list_item_title_padding_bottom">7dp</dimen>
-
     <!-- designed by mySelf -->
     <!-- tab -->
     <dimen name="tab_height">60dp</dimen>
@@ -46,23 +30,5 @@
     <dimen name="font_item_info">12dp</dimen>
     <dimen name="font_article">14dp</dimen>
     <dimen name="font_tab_secondly">14dp</dimen>
-
-    <!-- list_item_device_category -->
-    <dimen name="list_item_device_category_height">40dp</dimen>
-
-    <!-- list_item_device -->
-    <dimen name="list_item_device_image_width">140dp</dimen>
-    <dimen name="list_item_device_image_height">140dp</dimen>
-    <dimen name="list_item_reserve_device_image_width">120dp</dimen>
-    <dimen name="list_item_reserve_device_image_height">120dp</dimen>
-
-    <dimen name="list_item_device_reserve_btn_width">60dp</dimen>
-    <dimen name="list_item_device_reserve_btn_height">30dp</dimen>
-
-    <dimen name="list_item_reserve_btn_width">60dp</dimen>
-    <dimen name="list_item_reserve_btn_height">30dp</dimen>
-
-    <!-- list_item_person -->
-    <dimen name="list_item_person_height">45dp</dimen>
 
 </resources>

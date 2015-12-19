@@ -18,8 +18,6 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    public PersonFragmentLogined aaa;
-
     /*
     * 声明ViewPager和ViewPager的数据集合
     * */

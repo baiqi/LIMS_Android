@@ -8,88 +8,166 @@ import android.view.ViewGroup;
 
 import java.util.List;
 
-import hopestudio.org.lims.Controller.ViewHolder.DataNewsViewHolder;
-import hopestudio.org.lims.Model.DataNewsModel;
+import hopestudio.org.lims.Model.DataNewsInfo;
 import hopestudio.org.lims.R;
 
 /**
- * Created by dengzhirong on 15.12.19.
+ * Created by dengzhirong on 15.12.11.
  */
-public class NewsAdapter extends RecyclerView.Adapter<DataNewsViewHolder> {
+public class NewsAdapter extends RecyclerView.Adapter<personalCenterViewHolder> {
 
-    private LayoutInflater mInflater;
+    private LayoutInflater inflater;
     private Context context;
-    private List<DataNewsModel> dataList;
+    private List<DataNewsInfo> datas;
+    private OnItemClickListener onItemClickListener;
 
-    public NewsAdapter(Context context, List<DataNewsModel> datas) {
+    // RecyclerView中列表项的样式文件
+    private final int newsRecyclerViewLayoutResId = R.layout.list_item_news_list;
+
+    public NewsAdapter(Context context, List<DataNewsInfo> datas) {
         this.context = context;
-        this.dataList = datas;
-        mInflater = LayoutInflater.from(context);
+        this.datas = datas;
+        inflater = LayoutInflater.from(context);
     }
 
+    /*
+    * 提供项目点击的事件监听接口
+    * */
     public interface OnItemClickListener {
         void onItemClick(View view, int position);
         void onItemLongClick(View view, int position);
     }
 
-    private OnItemClickListener mOnItemClickListener;
-
     public void setOnItemClickListener(OnItemClickListener listener) {
-        this.mOnItemClickListener = listener;
+        this.onItemClickListener = listener;
+    }
+
+/*    public void addData(String<DataNewsInfo> insertOne, int position) {
+        mDatas.add(insertOne);
+        notifyItemInserted(position);
+    }
+
+    public void deleteData(int position) {
+        mDatas.remove(position);
+        notifyItemRemoved(position);
+    }*/
+
+    @Override
+    public int getItemCount() {
+        return datas.size();
     }
 
     // 创建ViewHolder
     @Override
-    public DataNewsViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = mInflater.inflate(R.layout.list_item_news_list, parent, false);
-        DataNewsViewHolder viewHolder = new DataNewsViewHolder(view);
+    public personalCenterViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View view = inflater.inflate(newsRecyclerViewLayoutResId, parent, false);
+        personalCenterViewHolder viewHolder = new personalCenterViewHolder(view);
         return viewHolder;
     }
 
     // 绑定ViewHolder
     @Override
-    public void onBindViewHolder(final DataNewsViewHolder holder, final int position) {
+    public void onBindViewHolder(final personalCenterViewHolder holder, final int position) {
         ViewGroup.LayoutParams layoutParams = holder.itemView.getLayoutParams();
+        holder.itemView.setLayoutParams(layoutParams);
 
         /*
-        * 为ViewHolder设置子项目中数据与View的对应关系
-        * newsTitle：文章标题
-        * newsInfoDate：文章日期
-        * newsInfoAuthor：文章作者
-        * newsInfoTag：文章标签
+        * 为ViewHolder中的View绑定数据显示
         * */
-        holder.itemView.setLayoutParams(layoutParams);
-        holder.newsTitle.setText(dataList.get(position).newsTitle);
-        holder.newsInfoDate.setText(dataList.get(position).newsInfoDate);
-        holder.newsInfoAuthor.setText(dataList.get(position).newsInfoAuthor);
-        holder.newsInfoTag.setText(dataList.get(position).newsInfoTag);
+        holder.newsTitle.setText(datas.get(position).newsTitle);
+        holder.newsColumn.setText(datas.get(position).newsColumn);
+        holder.newsTime.setText(datas.get(position).newsTime);
+        holder.newsAuthor.setText(datas.get(position).newsAuthor);
 
-        if(mOnItemClickListener != null) {
+        if(onItemClickListener != null) {
             holder.itemView.setOnClickListener(new View.OnClickListener() {
 
                 @Override
                 public void onClick(View v) {
                     int layoutPosition = holder.getLayoutPosition();
-                    mOnItemClickListener.onItemClick(holder.itemView, layoutPosition);
+                    onItemClickListener.onItemClick(holder.itemView, layoutPosition);
                 }
 
-            });
-
-            // longclick
-            holder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
-                @Override
-                public boolean onLongClick(View v) {
-                    int layoutPosition = holder.getLayoutPosition();
-                    mOnItemClickListener.onItemLongClick(holder.itemView, layoutPosition);
-                    return false;
-                }
             });
         }
-    }
 
-    @Override
-    public int getItemCount() {
-        return dataList.size();
+        // longclick
+        holder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                int layoutPosition = holder.getLayoutPosition();
+                onItemClickListener.onItemLongClick(holder.itemView, layoutPosition);
+                return false;
+            }
+        });
+    }
+}
+
+/*
+* 使用：
+* */
+
+/*
+private RecyclerView rv;
+private List<String> mDatas;
+private mSimpleAdapter mAdapter;
+private void initDatas() {
+    mDatas = new ArrayList<String>();
+    for(int i = 'A'; i <= 'z'; i++) {
+        mDatas.add("" + (char)i);
     }
 
 }
+private void initViews() {
+    rv = (RecyclerView) findViewById(R.id.recyclerView);
+}
+
+initDatas();
+
+initViews();
+mAdapter = new mSimpleAdapter(this, mDatas);
+    rv.setAdapter(mAdapter);
+
+    // 设置RecyclerView的布局管理
+    LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
+    rv.setLayoutManager(linearLayoutManager);
+
+    // 设置RecyclerView动画
+    rv.setItemAnimator(new DefaultItemAnimator());
+
+    mAdapter.setOnItemClickListener(new mSimpleAdapter.OnItemClickListener() {
+@Override
+public void onItemClick(View view, int position) {
+    Toast.makeText(MainActivity.this, "short Click: " + position + "", Toast.LENGTH_SHORT).show();
+    }
+
+@Override
+public void onItemLongClick(View view, int position) {
+    Toast.makeText(MainActivity.this, "long Click: " + position + "", Toast.LENGTH_SHORT).show();
+    }
+});
+
+
+
+/*NewsBean newsBean;
+
+jsonObject = new JSONObject(jsonString);
+JSONArray jsonArray = jsonObject.getJSONArray("data");
+
+*//*
+* 逐行解析JSON数据
+* *//*
+for(int i = 0; i < jsonArray.length(); i++) {
+
+jsonObject = jsonArray.getJSONObject(i);
+
+newsBean = new NewsBean();
+
+newsBean.newsTitle = jsonObject.getString("name");
+
+newsBean.newsDate = jsonObject.getString("date");
+
+newsBean.newsContent = jsonObject.getString("content");
+
+newsBeanList.add(newsBean);
+}*/
