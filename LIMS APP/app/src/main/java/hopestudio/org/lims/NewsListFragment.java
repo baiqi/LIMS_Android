@@ -39,6 +39,7 @@ public class NewsListFragment extends android.support.v4.app.Fragment implements
 
     public NewsListFragment(FragmentManager fragmentManager) {
         this.fragmentManager = fragmentManager;
+//        this.fragmentManager = NewsListFragment.this.getActivity().getSupportFragmentManager();
     }
 
     @Override

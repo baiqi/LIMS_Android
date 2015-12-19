@@ -1,7 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/list_item_device_category_height"
+    android:orientation="horizontal"
+    android:gravity="center_vertical">
+    <!-- 标题 + 项目数 -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content">
+        <!-- 标题 -->
+        <TextView
+            android:id="@+id/list_item_device_category_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我是标题我是标题"
+            android:textColor="@color/color_font_title_item"
+            android:textSize="@dimen/font_item_title"/>
+        <!-- Info项目数 -->
+        <TextView
+            android:id="@+id/list_item_device_category_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_item_info"
+            android:textColor="@color/color_font_info_item"
+            android:text="(4)"/>
+    </LinearLayout>
+    <!-- 表示有内容的图标 -->
+    <ImageView
+        android:id="@+id/list_item_device_category_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/icon_next"
+        android:paddingRight="@dimen/list_item_device_category_padding_right"/>
 </LinearLayout>

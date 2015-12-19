@@ -3,8 +3,9 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="仪器列表>>按功能分类"/>
+    <!-- 仪器列表>>按功能分类 RecyclerView列表 -->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/device_total_function_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 </LinearLayout>

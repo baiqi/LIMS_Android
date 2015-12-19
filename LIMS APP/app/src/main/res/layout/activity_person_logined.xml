@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="0dp">
+    <!-- 用户信息 -->
+    <include layout="@layout/part_person_info" />
+    <!-- 个人中心列表 -->
+
+    <!-- 列表 -->
+    <include layout="@layout/part_person_center_list_logined" />
+
+    <!-- 退出登录 -->
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:text="退出登录"/>
+</LinearLayout>

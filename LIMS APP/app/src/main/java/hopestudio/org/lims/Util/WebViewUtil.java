@@ -1,5 +1,6 @@
 package hopestudio.org.lims.Util;
 
+import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
@@ -13,9 +14,13 @@ public class WebViewUtil {
     /*
     * 往WebView中载入url中的内容
     * */
-    public static void loadWebView(WebView webview, String url) {
+    public void loadWebView(WebView webview, String url) {
         // 打开网页
         webview.loadUrl(url);
+
+        // 设置WebView中的JavaScript可用
+        WebSettings webSettings = webview.getSettings();
+        webSettings.setJavaScriptEnabled(true);
 
         // 将WebKit内核嵌入到本应用中
         webview.setWebViewClient(new WebViewClient() {

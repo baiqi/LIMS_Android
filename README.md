@@ -11,7 +11,15 @@
 
 ## 日志：
 
-2015-12-18：完成ViewPager跳转部分（未处理多ViewPager嵌套bug）；
+
+2015-12-18：
+
+完成ViewPager跳转部分（未处理多ViewPager嵌套bug）；
+
+2015-12-19：
+
+完成RecyclerView的封装，和列表Item的样式编写；
+
 =======
 Complete the Tab and LanuchPage
 >>>>>>> 16d320104c59d0a22d9c95aa97fd4488bc61dfc6

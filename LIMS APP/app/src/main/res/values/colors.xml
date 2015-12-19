@@ -16,7 +16,7 @@
     <color name="color_font_default">#666666</color>
     <color name="color_font_tab">#999999</color>
     <color name="color_font_title_toolbar">#ffffff</color>
-    <color name="color_font_title_item">#000000</color>
+    <color name="color_font_title_item">#333333</color>
     <color name="color_font_subTitle_item">#333333</color>
     <color name="color_font_article">#666666</color>
     <color name="color_font_info_item">#666666</color>
