@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#009688</color>
+    <color name="colorPrimaryDark">#009688</color>
+    <!--<color name="colorAccent">#FF4081</color>-->
+    <color name="colorAccent">#009688</color>
+
+    <!-- designed by mySelf -->
+    <!-- background color -->
+    <color name="color_bg_app">#ffffff</color>
+    <color name="color_bg_tab">#fefefe</color>
+    <color name="color_bg_toolbar">#009688</color>
+    <color name="color_bg_default">#cccccc</color>
+
+    <!-- font color -->
+    <color name="color_font_default">#666666</color>
+    <color name="color_font_tab">#999999</color>
+    <color name="color_font_title_toolbar">#ffffff</color>
+    <color name="color_font_title_item">#333333</color>
+    <color name="color_font_subTitle_item">#333333</color>
+    <color name="color_font_article">#666666</color>
+    <color name="color_font_info_item">#666666</color>
+    <color name="color_font_tab_secondly">#666666</color>
+
+    <color name="color_font_tab_hover">#009688</color>
+
+    <!-- border color -->
+    <color name="color_border_tab">#cccccc</color>
+    <color name="color_border_item">#cccccc</color>
+    <color name="color_border_tab_secondly">#009688</color>
+
+</resources>

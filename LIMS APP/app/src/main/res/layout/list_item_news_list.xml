@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/list_item_padding_top"
+    android:paddingBottom="@dimen/list_item_padding_bottom"
+    android:paddingLeft="@dimen/list_item_padding_left"
+    android:paddingRight="@dimen/list_item_padding_right">
+    <!-- 新闻标题 -->
+    <TextView
+        android:id="@+id/list_item_news_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_font_title_item"
+        android:textSize="@dimen/font_item_title"
+        android:text="我是标题我是标题我是标题我是标题"/>
+    <!-- Info -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/list_item_info_padding_top">
+        <!-- 日期 -->
+        <TextView
+            android:id="@+id/list_item_news_info_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2015-12-16"
+            android:textSize="@dimen/font_item_info"
+            android:textColor="@color/color_font_info_item"
+            android:paddingRight="@dimen/list_item_info_padding_right"
+            android:drawablePadding="@dimen/list_item_info_drawable_padding"
+            android:drawableLeft="@mipmap/icon_lsit_info_date"/>
+        <!-- 作者 -->
+        <TextView
+            android:id="@+id/list_item_news_info_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="小凳子"
+            android:textSize="@dimen/font_item_info"
+            android:textColor="@color/color_font_info_item"
+            android:paddingRight="@dimen/list_item_info_padding_right"
+            android:drawablePadding="@dimen/list_item_info_drawable_padding"
+            android:drawableLeft="@mipmap/icon_lsit_info_author"/>
+        <!-- 标签 -->
+        <TextView
+            android:id="@+id/list_item_news_info_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="安全"
+            android:textSize="@dimen/font_item_info"
+            android:textColor="@color/color_font_info_item"
+            android:paddingRight="@dimen/list_item_info_padding_right"
+            android:drawablePadding="@dimen/list_item_info_drawable_padding"
+            android:drawableLeft="@mipmap/icon_lsit_info_tag"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/list_item_device_padding">
+    <!-- 仪器大图：140 * 140 dp -->
+    <ImageView
+        android:id="@+id/list_item_reserved_pic"
+        android:layout_width="@dimen/list_item_reserve_device_image_width"
+        android:layout_height="@dimen/list_item_reserve_device_image_height"
+        android:layout_gravity="center"
+        android:src="@drawable/pic_device_default"
+        android:layout_marginRight="10dp" />
+    <!-- 仪器预约信息 -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <!-- 仪器名称 -->
+        <TextView
+            android:id="@+id/list_item_reserved_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="我是标题我是标题"
+            android:textColor="@color/color_font_title_item"
+            android:textSize="@dimen/font_item_title"
+            android:paddingTop="@dimen/list_item_padding_top"
+            android:ellipsize="end"
+            android:lines="1"/>
+        <!-- 预约时长和预约费用 -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/list_item_reserved_duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:text="Duration:4h"
+                android:layout_alignParentLeft="true"
+                android:textSize="@dimen/font_item_info"
+                android:textColor="@color/color_font_info_item" />
+            <TextView
+                android:id="@+id/list_item_reserved_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total:￥800 = ￥200 * 4"
+                android:layout_alignParentRight="true"
+                android:textSize="@dimen/font_item_info"
+                android:textColor="@color/color_font_info_item" />
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="预约时间段:"/>
+        <TextView
+            android:id="@+id/list_item_reserved_times"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12dp"
+            android:text="2015-12-16 09:30 - 2015-12-17 11:30"/>
+    </LinearLayout>
+</LinearLayout>

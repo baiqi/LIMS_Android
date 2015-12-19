@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id="test">
+</div>
+
+<button id="button" type="button">click me</button>
+<script src="web/js/jquery-1.11.3.js"></script>
+<script>
+    jQuery.ajax({
+        method: "POST",
+        url: "http://localhost:8090/LIMSServer/admin/controller/get_news_list.php",
+        data: {loadingIndex: 0, ArticleType: "News"}
+    }).done(function( msg ) {
+        $("#test").append(msg);
+    });
+
+    var count = 1;
+    $("#button").click(function() {
+        jQuery.ajax({
+            method: "POST",
+            url: "http://localhost:8090/LIMSServer/admin/controller/get_news_list.php",
+            data: {loadingIndex: count, ArticleType: "News"}
+        }).done(function( msg ) {
+            $("#test").append(msg);
+        });
+        count++;
+    });
+</script>
+</body>
+</html>

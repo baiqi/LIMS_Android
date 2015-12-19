@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">LIMS</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- tab menu -->
+    <string name="tab_news">新闻公告</string>
+    <string name="tab_lesson">课程安排</string>
+    <string name="tab_device">仪器列表</string>
+    <string name="tab_reserve">预约清单</string>
+    <string name="tab_person">个人中心</string>
+
+    <!-- tab_news 二级栏目 -->
+    <string name="tab_news_newscenter">新闻中心</string>
+    <string name="tab_news_rule">规章制度</string>
+    <string name="tab_news_struct">组织架构</string>
+    <string name="tab_news_service">服务指南</string>
+
+    <!-- tab_仪器列表 二级栏目 -->
+    <string name="tab_device_total">全部</string>
+    <string name="tab_device_usual">常用</string>
+    <string name="tab_device_star">收藏</string>
+
+    <!-- tab_仪器列表_仪器分类 二级栏目 -->
+    <string name="tab_device_total_department">按单位分类</string>
+    <string name="tab_device_total_function">按功能分类</string>
+    <string name="tab_device_total_position">按位置分类</string>
+
+    <!-- tab_预约列表 二级栏目 -->
+    <string name="tab_reserve_resering">正在预约</string>
+    <string name="tab_reserve_reserved">预约历史</string>
+
+</resources>

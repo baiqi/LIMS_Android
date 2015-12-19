@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id="test">
+</div>
+
+<!--<button id="button" type="button">click me</button>-->
+<script src="web/js/jquery-1.11.3.js"></script>
+<script>
+    jQuery.ajax({
+        method: "POST",
+        url: "http://localhost:8090/LIMSServer/admin/controller/get_news_detail.php",
+        data: {"articleID": 2}
+    }).done(function( msg ) {
+        $("#test").append(msg);
+    });
+</script>
+</body>
+</html>

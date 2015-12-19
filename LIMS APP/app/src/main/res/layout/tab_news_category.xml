@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/tab_secondly_height"
+    android:background="@drawable/tab_border_bottom">
+    <TextView
+        android:id="@+id/tab_news_newscenter"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="@dimen/font_tab_secondly"
+        android:text="@string/tab_news_newscenter"
+        android:textColor="@color/color_font_tab_hover"
+        android:drawablePadding="3dp" />
+    <TextView
+        android:id="@+id/tab_news_rule"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="@dimen/font_tab_secondly"
+        android:text="@string/tab_news_rule"
+        android:textColor="@color/color_font_tab_secondly" />
+    <TextView
+        android:id="@+id/tab_news_struct"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="@dimen/font_tab_secondly"
+        android:text="@string/tab_news_struct"
+        android:textColor="@color/color_font_tab_secondly" />
+    <TextView
+        android:id="@+id/tab_news_service"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="@dimen/font_tab_secondly"
+        android:text="@string/tab_news_service"
+        android:textColor="@color/color_font_tab_secondly" />
+</LinearLayout>
