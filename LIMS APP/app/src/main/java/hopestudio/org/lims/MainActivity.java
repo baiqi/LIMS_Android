@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,6 +43,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         /* Toolbar设置 */
         Toolbar mToolbar = (Toolbar) findViewById(R.id.toolbar);
         mToolbar.setTitle(R.string.app_name);
+        mToolbar.setNavigationIcon(R.mipmap.icon_toolbar_back);
+        mToolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                // Handle the menu item
+                Toast.makeText(MainActivity.this, "hhahah", Toast.LENGTH_LONG).show();
+                return true;
+            }
+        });
+        mToolbar.inflateMenu(R.menu.toolbar);
         setSupportActionBar(mToolbar);
 
 /*        mToolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {

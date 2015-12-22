@@ -8,6 +8,11 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="toolbarStyle">@style/ToolbarStyle</item>
         <item name="drawerArrowStyle">@style/ToolbarStyle</item>
+        <!--toolbar标题文字颜色-->
+        <item name="android:textColorPrimary">#ffffff</item>
+        <item name="android:windowBackground">@color/colorPrimary</item>
+
+        <item name="actionOverflowMenuStyle">@style/OverflowMenuStyle</item>
     </style>
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
@@ -18,6 +23,26 @@
 
     <style name="ToolbarStyle" parent="ThemeOverlay.AppCompat.ActionBar">
         <item name="android:textColorPrimary">#ffffff</item>
-        <item name="actionMenuTextColor">#ffffff</item>
+        <item name="actionMenuTextColor">#333333</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="colorPrimaryDark">#009688</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+    </style>
+
+    <!--溢出菜单样式 -->
+    <style name="OverflowMenuStyle" parent="@style/Widget.AppCompat.Light.PopupMenu.Overflow">
+        <item name="overlapAnchor">false</item>
+        <item name="android:dropDownWidth">wrap_content</item>
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:popupBackground">?attr/colorPrimary</item>
+    </style>
+
+    <!-- toolbar弹出菜单样式 -->
+    <style name="ToolbarPopupTheme" parent="@style/ThemeOverlay.AppCompat">
+        <item name="android:colorBackground">#212121</item>
+    </style>
+
+    <style name="ToolbarTitle" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">14sp</item>
     </style>
 </resources>

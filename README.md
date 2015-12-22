@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 ## 目录结构：
 
 /LIMS APP：Android版APP源码，开发工具为Android Studio 1.4.1；
@@ -20,6 +20,6 @@
 
 完成RecyclerView的封装，和列表Item的样式编写；
 
-=======
-Complete the Tab and LanuchPage
->>>>>>> 16d320104c59d0a22d9c95aa97fd4488bc61dfc6
+2015-12-20：
+
+更新ToolBar的样式设置；
