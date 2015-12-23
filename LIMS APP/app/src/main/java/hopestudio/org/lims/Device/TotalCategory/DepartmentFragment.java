@@ -39,6 +39,7 @@ public class DepartmentFragment extends android.support.v4.app.Fragment {
 
         for(int i = 0; i < 10; i++) {
             DataDeviceCategoryModel deviceCategoryBean = new DataDeviceCategoryModel();
+
             deviceCategoryBean.deviceCategoryTitle = "部门" + i;
             deviceCategoryBean.deviceCategoryCount ="(" + i + ")";
             dataList.add(deviceCategoryBean);

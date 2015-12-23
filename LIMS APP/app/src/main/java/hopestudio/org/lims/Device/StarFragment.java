@@ -39,12 +39,13 @@ public class StarFragment extends android.support.v4.app.Fragment {
             DataDeviceListModel deviceCategoryBean = new DataDeviceListModel();
             /*
             * deviceListPic：仪器图片
+            * deviceListPicUrl：仪器图片资源地址
             * deviceListTitle：仪器名称
             * deviceListModel：仪器型号
             * deviceListReservedBtn：仪器预约记录按钮
             * deviceListReservingBtn：仪器预约按钮
             * */
-            deviceCategoryBean.deviceListPic = R.drawable.pic_device_default;
+            deviceCategoryBean.deviceListPicUrl = "http://7xinb0.com1.z0.glb.clouddn.com/skin/HopeRebuild/dist/images/logo/logo_40.png";
             deviceCategoryBean.deviceListTitle = "收藏仪器" + i;
             deviceCategoryBean.deviceListModel = "型号" + i;
             dataList.add(deviceCategoryBean);

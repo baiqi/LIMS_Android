@@ -46,6 +46,7 @@ public class UsualFragment extends android.support.v4.app.Fragment {
             * deviceListReservedBtn：仪器预约记录按钮
             * deviceListReservingBtn：仪器预约按钮
             * */
+            deviceCategoryBean.deviceListPicUrl = "http://7xinb0.com1.z0.glb.clouddn.com/skin/HopeRebuild/dist/images/logo/logo_40.png";
             deviceCategoryBean.deviceListPic = R.drawable.pic_device_default;
             deviceCategoryBean.deviceListTitle = "常用仪器" + i;
             deviceCategoryBean.deviceListModel = "型号" + i;

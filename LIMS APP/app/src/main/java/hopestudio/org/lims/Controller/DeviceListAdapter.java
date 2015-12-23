@@ -5,6 +5,10 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 
 import java.util.List;
 
@@ -64,7 +68,15 @@ public class DeviceListAdapter extends RecyclerView.Adapter<DataDeviceListViewHo
         * deviceListReservingBtn：仪器预约按钮
         * */
         holder.itemView.setLayoutParams(layoutParams);
-        holder.deviceListPic.setImageResource(dataList.get(position).deviceListPic);
+
+        if(dataList.get(position).deviceListPicUrl !="") {
+
+
+            ImageLoader loader = ImageLoader.getInstance();
+            loader.init(ImageLoaderConfiguration.createDefault(context));
+            loader.displayImage(dataList.get(position).deviceListPicUrl, holder.deviceListPic);
+        }
+
         holder.deviceListTitle.setText(dataList.get(position).deviceListTitle);
         holder.deviceListModel.setText(dataList.get(position).deviceListModel);
 

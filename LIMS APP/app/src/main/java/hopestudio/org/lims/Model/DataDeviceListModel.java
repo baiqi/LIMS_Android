@@ -6,12 +6,14 @@ package hopestudio.org.lims.Model;
 public class DataDeviceListModel {
     /*
     * deviceListPic：仪器图片Resource ID
+    * deviceListPicUrl：仪器图片资源地址
     * deviceListTitle：仪器名称
     * deviceListModel：仪器型号
     * deviceListReservedBtn：仪器预约记录按钮
     * deviceListReservingBtn：仪器预约按钮
     * */
     public int deviceListPic;
+    public String deviceListPicUrl;
     public String deviceListTitle;
     public String deviceListModel;
     public String deviceListReservedBtn;
