@@ -14,6 +14,7 @@ import java.util.List;
 import hopestudio.org.lims.Controller.DeviceCategoryAdapter;
 import hopestudio.org.lims.Model.DataDeviceCategoryModel;
 import hopestudio.org.lims.R;
+import hopestudio.org.lims.Util.DividerItemDecoration;
 
 /**
  * Created by dengzhirong on 15.12.19.
@@ -50,6 +51,8 @@ public class FunctionFragment extends android.support.v4.app.Fragment {
         // 设置RecyclerView的布局管理
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this.getActivity(), LinearLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(linearLayoutManager);
+        // 为RecyclerView添加分割线
+        recyclerView.addItemDecoration(new DividerItemDecoration(this.getActivity(), DividerItemDecoration.VERTICAL_LIST));
 
         // 设置RecyclerView动画
         recyclerView.setItemAnimator(new DefaultItemAnimator());

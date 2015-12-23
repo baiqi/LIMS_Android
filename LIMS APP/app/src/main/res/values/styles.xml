@@ -8,8 +8,7 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="toolbarStyle">@style/ToolbarStyle</item>
         <item name="drawerArrowStyle">@style/ToolbarStyle</item>
-        <!--toolbar标题文字颜色-->
-        <item name="android:textColorPrimary">#ffffff</item>
+
         <item name="android:windowBackground">@color/colorPrimary</item>
 
         <item name="actionOverflowMenuStyle">@style/OverflowMenuStyle</item>
